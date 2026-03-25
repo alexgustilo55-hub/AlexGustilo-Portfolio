@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex R. Gustilo Jr. - Developer Portfolio</title>
+  <title>Alex Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
 
+<!-- NIGHTMODE TOGGLE -->
 <button class="toggle" onclick="toggleDark()">🌙</button>
 
 <header>
-  <h1>Alex R. Gustilo Jr.</h1>
-  <p id="typing"></p>
+  <p class="welcome">Welcome to my Portfolio</p>
+  <h1><span class="typed-text"></span></h1>
+  <p class="profession">IT Student | Web Developer | Back-end Developer | Problem Solver | Continuous Learner</p>
 </header>
 
 <nav>
@@ -30,7 +30,9 @@
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I am an IT student with experience in web development, back-end systems, API integration, and hardware programming. I build projects that demonstrate my technical skills, problem-solving abilities, and continuous learning.
+    Hi, I'm Alex, an IT student passionate about creating clean and efficient applications.  
+    I develop web applications and backend systems that are user-friendly and practical.  
+    I am a problem solver who continuously learns and applies new technologies to build projects that demonstrate my technical skills and professional growth.
   </p>
 </section>
 
@@ -49,33 +51,42 @@
 
 <section id="projects">
   <h2>Projects</h2>
-
   <div class="projects">
-
     <div class="project-card">
-      <h3>SecuTrack System</h3>
-      <p>Smart security system using RFID and Arduino with monitoring features.</p>
-      <a href="https://github.com/alexgustilo55-hub/smart_security_app" target="_blank">View Project</a>
+      <img src="assets/securityapp.png" alt="SecuTrack System">
+      <div class="project-details">
+        <h3>SecuTrack System</h3>
+        <p>Smart security system integrating web, mobile, and Arduino platforms using REST API and WebSocket for real-time monitoring, live device connectivity, and improved overall security management.</p>
+        <a href="https://github.com/alexgustilo55-hub/smart_security_app" target="_blank">View</a>
+      </div>
     </div>
 
     <div class="project-card">
-      <h3>Filipino Recipes</h3>
-      <p>Front-end website for cooking tips and Filipino recipes.</p>
-      <a href="https://github.com/alexgustilo55-hub/filipino-recipes" target="_blank">View Project</a>
+      <img src="assets/cookingtips.png" alt="Filipino Recipes">
+      <div class="project-details">
+        <h3>Filipino Recipes</h3>
+        <p>Front-end website showcasing Filipino recipes with intuitive navigation and responsive design for all devices.</p>
+        <a href="https://github.com/alexgustilo55-hub/filipino-recipes" target="_blank">View</a>
+      </div>
     </div>
 
     <div class="project-card">
-      <h3>JD&S Jangle Delivery & Services</h3>
-      <p>Delivery service frontend system with modern UI design.</p>
-      <a href="https://github.com/alexgustilo55-hub/Jangle-Delivery-and-Services---Frontend" target="_blank">View Project</a>
+      <img src="assets/jd&s.png" alt="JD&S Jangle Delivery">
+      <div class="project-details">
+        <h3>JD&S Jangle Delivery & Services</h3>
+        <p>Delivery service front-end application with modern UI and seamless user experience for placing and tracking orders.</p>
+        <a href="https://github.com/alexgustilo55-hub/Jangle-Delivery-and-Services---Frontend" target="_blank">View</a>
+      </div>
     </div>
 
     <div class="project-card">
-      <h3>Campus Event System</h3>
-      <p>Flask and MySQL-based system for managing campus events and appointments.</p>
-      <a href="https://github.com/alexgustilo55-hub/Campus-Events-Activity-Appointment-System-" target="_blank">View Project</a>
+      <img src="assets/events.png" alt="Campus Event System">
+      <div class="project-details">
+        <h3>Campus Event System</h3>
+        <p>Flask & MySQL system for managing campus events and student appointments efficiently with easy-to-use interface.</p>
+        <a href="https://github.com/alexgustilo55-hub/Campus-Events-Activity-Appointment-System-" target="_blank">View</a>
+      </div>
     </div>
-
   </div>
 </section>
 
@@ -88,10 +99,26 @@
 </section>
 
 <footer>
-  <p>© 2026 Alex Gustilo | Portfolio</p>
+  <p>© 2026 Alex | Portfolio</p>
 </footer>
 
-<script src="js/script.js"></script>
+<script>
+  // NIGHT MODE TOGGLE
+  function toggleDark() { document.body.classList.toggle("dark"); }
+
+  // TYPING EFFECT
+  const typedText = document.querySelector(".typed-text");
+  const textToType = "Hi, I'm Alex";
+  let index = 0;
+  function type() {
+    if(index < textToType.length){
+      typedText.textContent += textToType.charAt(index);
+      index++;
+      setTimeout(type, 150);
+    }
+  }
+  document.addEventListener("DOMContentLoaded", () => { type(); });
+</script>
 
 </body>
 </html>
