@@ -23,7 +23,6 @@ function App() {
   AOS.refresh(); 
 }, []);
 
-
   return (
     <div>
       <Navbar />
@@ -33,6 +32,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      
     </div>
   );
 }

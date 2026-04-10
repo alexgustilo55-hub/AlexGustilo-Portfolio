@@ -19,7 +19,8 @@ function Skills() {
         </div>
 
         {/* Back-End */}
-        <div className="skill-category" data-aos="zoom-in" data-aos-delay="300" data-aos-once="false">
+        <div className="skill-category" data-aos="zoom-in" data-aos-delay="300" dat
+        a-aos-once="false">
           <h3 className="backend">Back-End</h3>
           <div className="skills-grid">
             <div className="skill" data-aos="fade-up" data-aos-delay="100" data-aos-once="false"><SiFlask /> Flask</div>
